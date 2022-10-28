@@ -9,10 +9,10 @@ To accelerate, [Numba](https://numba.pydata.org/) library is used.
 
 ## Installation
 
-* Clone the repository
-* Create a virtual environment
+* Clone the repository.
+* Create a virtual environment.
 * Install pip packages.
-If you have trouble with torch, please install it according to [PyTorch](ttps://pytorch.org/).
+If you have trouble with torch, please install it according to [PyTorch](https://pytorch.org/).
 
 ```bash
 git clone https://github.com/veliglmz/tiny-cuda-nn-python.git
