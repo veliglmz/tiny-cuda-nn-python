@@ -1,6 +1,6 @@
 # Python Implementation of tiny-cuda-nn
 
-This code is an unofficial Python implementation of [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn). I've implemented only the [multiresolution hashing encoding](https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf) paper.
+This code is an unofficial Python implementation of [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) and [instant-ngp](https://github.com/NVlabs/instant-ngp). I've implemented only the [multiresolution hashing encoding](https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf) paper.
 
 To accelerate, [Numba](https://numba.pydata.org/) library is used.
 
@@ -9,10 +9,10 @@ To accelerate, [Numba](https://numba.pydata.org/) library is used.
 
 ## Installation
 
-* Clone the repository
-* Create a virtual environment
+* Clone the repository.
+* Create a virtual environment.
 * Install pip packages.
-If you have trouble with torch, please install it according to [PyTorch](ttps://pytorch.org/).
+If you have trouble with torch, please install it according to [PyTorch](https://pytorch.org/).
 
 ```bash
 git clone https://github.com/veliglmz/tiny-cuda-nn-python.git
