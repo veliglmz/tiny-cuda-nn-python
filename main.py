@@ -17,8 +17,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     
-    if not os.path.exists(args.output):
-        os.mkdir(args.output)
+    os.makedirs(args.output, exist_ok=True)
 
     file = open(args.config)
     json_data = json.load(file)

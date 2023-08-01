@@ -36,8 +36,8 @@ class Trainer:
         n_features = self.encoding.n_features
         self.network.train().cuda()
         # we only select pixels as many as the number of batch size for each epoch.
+        ts = timer()
         for epoch in range(1, self.n_epochs+1):
-            ts = timer()
             xs_and_ys_indices, gt = determine_samples(self.batch_size, self.n_coords, self.img)
             inputs_xs_and_ys = self.xs_and_ys[xs_and_ys_indices]
 
@@ -65,9 +65,10 @@ class Trainer:
             self.optimizer.step()
             te = timer()
             
-            if epoch % 100 == 0:
-                print(f"Epoch {epoch} | # of samples: {self.batch_size} | Time: {te - ts: .2f}")
+            if epoch % 500 == 0:
+                print(f"Epoch {epoch} | # of samples: {self.batch_size} | Time: {te - ts: .2f}s")
                 self.inference(name=str(epoch))
+                ts = timer()
 
     def inference(self, name=""):
         n_levels = self.encoding.n_levels

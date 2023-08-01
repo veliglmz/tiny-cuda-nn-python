@@ -2,28 +2,33 @@
 
 This code is an unofficial Python implementation of [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) and [instant-ngp](https://github.com/NVlabs/instant-ngp). I've implemented only the [multiresolution hashing encoding](https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf) paper.
 
-To accelerate, [Numba](https://numba.pydata.org/) library is used.
+[Numba](https://numba.pydata.org/) library is used to accelerate.
 
 ## Requirements
-* CUDA 11.3
+* Docker 24.0.5
+* Docker Compose v2.20.2
 
-## Installation
+## Usage
 
-* Clone the repository.
-* Create a virtual environment.
-* Install pip packages.
-If you have trouble with torch, please install it according to [PyTorch](https://pytorch.org/).
+Clone the repository.
 
 ```bash
 git clone https://github.com/veliglmz/tiny-cuda-nn-python.git
 cd tiny-cuda-nn-python
-python3.8 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
 ```
 
-## Usage
-
+Build the docker image.
 ```bash
-python main.py -i data/wall.jpg -c config.json -o inferences
+docker compose build
 ```
+
+Run the docker image. (the outputs are in the results folder of the host.)
+```bash
+docker compose run app
+```
+
+Stop containers and remove containers, networks, volumes, and images.
+```bash
+docker compose down
+```
+
