@@ -1,6 +1,6 @@
 {
     "n_epochs": 2500,
-    "batch_size": 12,
+    "batch_size": 16,
     "batch_size_granularity": 128,
     "n_input_dims": 2,
     "n_output_dims": 3,
